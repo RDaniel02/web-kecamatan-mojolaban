@@ -3,493 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal Informasi Wilayah Kecamatan Mojolaban, Kabupaten Sukoharjo, Jawa Tengah. Berisi informasi profil wilayah, kependudukan, fasilitas, dan berita terkini.">
     <title>Portal Informasi Wilayah - Kecamatan Mojolaban</title>
-    <style>
-        :root {
-            --primary-color: #292524;     /* Cokelat Arang / Warm Dark Espresso */
-            --primary-light: #44403c;
-            --accent-color: #d97706;      /* Warm Amber / Terracotta Kayu */
-            --accent-hover: #b45309;
-            --bg-color: #fbfbfa;          /* Background Krem Sangat Terang */
-            --text-color: #44403c;        /* Teks Cokelat Gelap Lembut */
-            --card-bg: #ffffff;
-            --border-color: #e7e5e4;
-            --banner-about: #ffffff;      
-            --banner-contact: #f5eee6;    /* Background selang-seling krem hangat */
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* Navbar Warm Earthy */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(41, 37, 36, 0.1);
-        }
-
-        .navbar {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.9rem 2rem;
-        }
-
-        /* Brand Container bisa diklik ke Beranda */
-        .brand-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .logo-img {
-            width: 45px;
-            height: auto;
-        }
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-            color: white;
-        }
-
-        .brand-text span {
-            font-size: 0.68rem;
-            letter-spacing: 0.8px;
-            opacity: 0.75;
-        }
-
-        .brand-text strong {
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 1.8rem;
-        }
-
-        .nav-links a {
-            color: #d6d3d1;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            cursor: pointer;
-        }
-
-        .nav-links a:hover {
-            color: #ffffff;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .section {
-            display: none;
-            animation: fadeIn 0.4s ease-in-out;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h1 {
-            color: var(--primary-color);
-            margin-bottom: 0.4rem;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            color: #78716c;
-            font-size: 1.05rem;
-        }
-
-        .sub-heading {
-            color: var(--primary-color);
-            margin: 2rem 0 1rem 0;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
-        .hero-header {
-            padding: 3rem 0 2rem 0;
-            text-align: left;
-        }
-
-        /* --- BERITA TERBARU --- */
-        .news-fullwidth {
-            width: 100%;
-            background-color: var(--banner-contact);
-            padding: 3.5rem 0;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .news-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .news-container h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .news-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(41,37,36,0.03);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid var(--border-color);
-        }
-
-        .news-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px -5px rgba(41,37,36,0.08);
-            border-color: var(--accent-color);
-        }
-
-        .news-card img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-        }
-
-        .news-card-content {
-            padding: 1.2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .news-date {
-            font-size: 0.8rem;
-            color: #78716c;
-        }
-
-        .news-card h3 {
-            font-size: 1rem;
-            color: var(--primary-color);
-            line-height: 1.4;
-            font-weight: 600;
-        }
-
-
-        /* --- BANNER TENTANG --- */
-        .about-fullwidth {
-            width: 100%;
-            background-color: var(--banner-about);
-            padding: 4rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .about-content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 3.5rem;
-            flex-wrap: wrap;
-        }
-
-        .about-img-box {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .about-img-box img {
-            width: 100%;
-            height: auto;
-            max-height: 320px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px -5px rgba(41,37,36,0.1);
-        }
-
-        .about-text-box {
-            flex: 1.4;
-            min-width: 300px;
-        }
-
-        .about-text-box h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.6rem;
-            font-weight: 700;
-        }
-
-        .about-text-box p {
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-
-        .btn-selengkapnya {
-            background-color: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 0.7rem 1.4rem;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-selengkapnya:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-
-        /* --- BANNER KONTAK & LOKASI MAPS --- */
-        .contact-location-fullwidth {
-            width: 100%;
-            background-color: var(--banner-contact);
-            padding: 4rem 0;
-        }
-
-        .contact-location-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            display: flex;
-            gap: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-card, .location-card {
-            flex: 1;
-            min-width: 300px;
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(41,37,36,0.03);
-            border: 1px solid var(--border-color);
-        }
-
-        .contact-card h3, .location-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1.2rem;
-            font-size: 1.25rem;
-            font-weight: 600;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 0.6rem;
-        }
-
-        .contact-card p {
-            margin-bottom: 0.9rem;
-            color: var(--text-color);
-            font-size: 0.95rem;
-        }
-
-        .map-embed-box {
-            position: relative;
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            margin-bottom: 0.8rem;
-        }
-
-        .map-embed-box iframe {
-            width: 100%;
-            height: 200px;
-            border: 0;
-            display: block;
-        }
-
-        .map-external-link {
-            display: inline-block;
-            color: var(--accent-color);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .map-external-link:hover {
-            color: var(--accent-hover);
-            text-decoration: underline;
-        }
-
-
-        /* --- DESAIN ACCORDION BARU: BORDERLESS & MENYATU DENGAN HALAMAN --- */
-        .standard-content-container {
-            max-width: 1000px;
-            margin: 2.5rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .accordion-header {
-            background: transparent;
-            padding: 1.2rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            transition: color 0.2s;
-        }
-
-        .accordion-header:hover {
-            color: var(--accent-color);
-        }
-
-        /* Ikon Panah V Modern */
-        .arrow-v {
-            font-size: 0.85rem;
-            color: var(--accent-color);
-            transition: transform 0.3s ease;
-            font-weight: bold;
-        }
-
-        .accordion-item.open .arrow-v {
-            transform: rotate(180deg);
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
-            background: transparent;
-            padding: 0;
-        }
-
-        .accordion-item.open .accordion-content {
-            max-height: 1200px;
-            padding: 0.5rem 0 1.5rem 0;
-        }
-
-        .accordion-content p, .accordion-content ul {
-            margin-bottom: 0.8rem;
-            font-size: 0.95rem;
-            color: #57534e;
-        }
-
-        .accordion-content ul {
-            padding-left: 1.5rem;
-        }
-
-        /* --- STYLING TABEL MODERN --- */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 0.8rem;
-            background: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 4px rgba(41,37,36,0.02);
-        }
-
-        .data-table th, .data-table td {
-            padding: 0.75rem 1rem;
-            text-align: left;
-            font-size: 0.92rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .data-table th {
-            background-color: #f5eee6;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .data-table tr:last-child td {
-            border-bottom: none;
-        }
-
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: var(--primary-color);
-            color: #a8a29e;
-            margin-top: 4rem;
-            font-size: 0.9rem;
-            border-top: 1px solid #44403c;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <nav class="navbar">
-            <!-- Brand container bisa diklik untuk kembali ke Beranda -->
-            <div class="brand-container" onclick="switchTab('beranda')">
+            <!-- Brand container menuju Beranda -->
+            <a href="index.html" class="brand-container">
                 <img src="logo-sukoharjo.jpg" alt="Logo Sukoharjo" class="logo-img" onerror="this.style.display='none'">
                 <div class="brand-text">
                     <span>PEMERINTAH KABUPATEN SUKOHARJO</span>
                     <strong>KECAMATAN MOJOLABAN</strong>
                 </div>
-            </div>
+            </a>
             <ul class="nav-links">
-                <li><a onclick="switchTab('beranda')">Beranda</a></li>
-                <li><a onclick="switchTab('profil')">Profil</a></li>
-                <li><a onclick="switchTab('demografi')">Demografi</a></li>
-                <li><a onclick="switchTab('fasilitas')">Fasilitas & Ekonomi</a></li>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="demografi.html">Demografi</a></li>
+                <li><a href="fasilitas.html">Fasilitas & Ekonomi</a></li>
             </ul>
         </nav>
     </header>
 
-
-    <!-- ================= 1. BERANDA ================= -->
-    <section id="beranda" class="section active">
+    <main class="page-content">
         <!-- Header Judul Beranda -->
         <div class="container">
             <div class="hero-header">
@@ -499,20 +38,20 @@
         </div>
 
         <!-- 1. Bagian Berita Terbaru -->
-        <div class="news-fullwidth">
+        <section class="news-fullwidth">
             <div class="news-container">
                 <h2>Berita Terbaru Kecamatan Mojolaban</h2>
                 <div class="news-grid">
                     <!-- Berita 1 -->
-                    <a href="https://solo.tribunnews.com/simakmur/348403/para-petani-plt-bupati-sukoharjo-gotong-royong-keruk-sedimen-agar-91-hektare-sawah-kembali-terairi" target="_blank" class="news-card">
+                    <a href="https://solo.tribunnews.com/simakmur/348403/para-petani-plt-bupati-sukoharjo-gotong-royong-keruk-sedimen-agar-91-hektare-sawah-kembali-terairi" target="_blank" rel="noopener noreferrer" class="news-card">
                         <img src="https://asset.tribunnews.com/bgJddN1QqrKXbW77g4Pj8W3LH20=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/solo/foto/bank/originals/Gabungan-Petani-Pemakai-Air-GP3A-Ngupoyo-Roso-2.jpg" alt="Gotong Royong Keruk Sedimen">
                         <div class="news-card-content">
                             <span class="news-date">TribunSolo / SiMakmur</span>
-                            <h3>Para Petani & Plt Bupati Sukoharjo Gotong Royong Keruk Sedimen Agar 91 Hektare Sawah Kembali Terairi</h3>
+                            <h3>Para Petani &amp; Plt Bupati Sukoharjo Gotong Royong Keruk Sedimen Agar 91 Hektare Sawah Kembali Terairi</h3>
                         </div>
                     </a>
                     <!-- Berita 2 -->
-                    <a href="https://solo.tribunnews.com/simakmur/343062/kolaborasi-pemdes-triyagan-sukoharjo-dan-seniman-sesaji-bagi-bagi-sembako-dan-cek-kesehatan-gratis" target="_blank" class="news-card">
+                    <a href="https://solo.tribunnews.com/simakmur/343062/kolaborasi-pemdes-triyagan-sukoharjo-dan-seniman-sesaji-bagi-bagi-sembako-dan-cek-kesehatan-gratis" target="_blank" rel="noopener noreferrer" class="news-card">
                         <img src="https://asset.tribunnews.com/E1fFywEcW5xpJ6ckpd4zpA_vQCA=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/solo/foto/bank/originals/Aksi-kepedulian-sosial-dilakukan-Pemerintah-Desa-Triyagan-Kecamatan-Mojolaba.jpg" alt="Bagi Sembako Pemdes Triyagan">
                         <div class="news-card-content">
                             <span class="news-date">TribunSolo / SiMakmur</span>
@@ -520,7 +59,7 @@
                         </div>
                     </a>
                     <!-- Berita 3 -->
-                    <a href="https://solo.tribunnews.com/simakmur/340746/bupati-etik-suryani-sidak-industri-ciu-di-mojolaban-sukoharjo-satu-bangunan-disegel-sementara" target="_blank" class="news-card">
+                    <a href="https://solo.tribunnews.com/simakmur/340746/bupati-etik-suryani-sidak-industri-ciu-di-mojolaban-sukoharjo-satu-bangunan-disegel-sementara" target="_blank" rel="noopener noreferrer" class="news-card">
                         <img src="https://asset.tribunnews.com/Al5zOKx2Gox-LEMKLRRe345kNME=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/solo/foto/bank/originals/Bupati-Etik-sidak-produksi-minuman-keras-jenis-ciu-di-Desa-Sentul.jpg" alt="Sidak Industri Ciu Mojolaban">
                         <div class="news-card-content">
                             <span class="news-date">TribunSolo / SiMakmur</span>
@@ -529,10 +68,10 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- 2. Banner Full-Width Bagian Tentang -->
-        <div class="about-fullwidth">
+        <section class="about-fullwidth">
             <div class="about-content-wrapper">
                 <div class="about-img-box">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUdmmR0O_01vAeb1c_zfM0UAE5Xlu9lDWe2SpOnFVANMpLVIaeEo4FMzfP&s=10" alt="Ilustrasi Wilayah" onerror="this.src='https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1?auto=format&fit=crop&w=600&q=80'">
@@ -540,15 +79,15 @@
                 <div class="about-text-box">
                     <h2>Tentang Kecamatan Mojolaban</h2>
                     <p>Kecamatan Mojolaban terletak di dataran tinggi, dengan tinggi 104 M dpl (diatas permukaan laut), jarak dari Barat ke Timur ± 8,0 KM, jarak dari Utara ke Selatan ± 6,0 KM. Jarak dari Ibukota Kecamatan ke Ibukota Kabupaten Sukoharjo ± 11 KM. Ada 15 Desa di wilayah Kecamatan Mojolaban...</p>
-                    <button class="btn-selengkapnya" onclick="switchTab('profil')">
+                    <a href="profil.html" class="btn-selengkapnya">
                         Baca Selengkapnya &rarr;
-                    </button>
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- 3. Banner Full-Width Bagian Kontak & Maps Interaktif -->
-        <div class="contact-location-fullwidth">
+        <section class="contact-location-fullwidth">
             <div class="contact-location-wrapper">
                 
                 <!-- Kontak di Kiri -->
@@ -565,201 +104,21 @@
                     <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">Peta interaktif kantor kecamatan (bisa digeser dan di-zoom):</p>
                     
                     <div class="map-embed-box">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.138541785536!2d110.8523!3d-7.5755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a16639bfa11b9%3A0x4027a76e3532280!2sKecamatan%20Mojolaban%2C%20Kabupaten%20Sukoharjo%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1650000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.138541785536!2d110.8523!3d-7.5755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a16639bfa11b9%3A0x4027a76e3532280!2sKecamatan%20Mojolaban%2C%20Kabupaten%20Sukoharjo%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1650000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta Lokasi Kantor Kecamatan Mojolaban"></iframe>
                     </div>
                     
-                    <a href="https://maps.google.com/?q=Kecamatan+Mojolaban+Sukoharjo" target="_blank" class="map-external-link">
+                    <a href="https://maps.google.com/?q=Kecamatan+Mojolaban+Sukoharjo" target="_blank" rel="noopener noreferrer" class="map-external-link">
                         Buka Peta Ukuran Penuh di Google Maps &rarr;
                     </a>
                 </div>
 
             </div>
-        </div>
-    </section>
-
-
-    <!-- ================= 2. PROFIL ================= -->
-    <section id="profil" class="section">
-        <div class="standard-content-container">
-            <h1>Profil Wilayah & Visi Misi</h1>
-            <p class="subtitle" style="margin-bottom: 2rem;">Informasi Visi Misi Kecamatan serta detail profil wilayah desa.</p>
-
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Visi & Misi Kecamatan Mojolaban</span>
-                    <span class="arrow-v">V</span>
-                </div>
-                <div class="accordion-content">
-                    <p><strong>Visi:</strong> Terwujudnya pelayanan masyarakat Kecamatan Mojolaban yang transparan, profesional, religius, dan berdaya saing di Kabupaten Sukoharjo.</p>
-                    <p><strong>Misi:</strong></p>
-                    <ul>
-                        <li>Meningkatkan kualitas pelayanan administrasi kependudukan yang cepat, mudah, dan ramah.</li>
-                        <li>Mengoptimalkan potensi ekonomi lokal, UMKM, dan industri kreatif warga.</li>
-                        <li>Memperkuat kerukunan sosial serta pembangunan infrastruktur wilayah yang merata.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h2 class="sub-heading">Informasi Tentang Desa</h2>
-
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Tentang Desa Palur</span>
-                    <span class="arrow-v">V</span>
-                </div>
-                <div class="accordion-content">
-                    <p><strong>Identitas:</strong> Kecamatan Mojolaban, Kabupaten Sukoharjo, Jawa Tengah (Kode Pos: 57554).</p>
-                    <p><strong>Geografi:</strong> Luas wilayah 409 Ha dengan titik koordinat 7°34'37"S 110°52'10"E.</p>
-                    <p><strong>Pemerintahan:</strong> Dipimpin oleh Kepala Desa Sugito, S.Pd (2018-sekarang).</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Tentang Desa Gadingan</span>
-                    <span class="arrow-v">V</span>
-                </div>
-                <div class="accordion-content">
-                    <p><strong>Identitas:</strong> Kecamatan Mojolaban, Kabupaten Sukoharjo, Jawa Tengah (Kode Pos: 57554).</p>
-                    <p><strong>Geografi:</strong> Luas wilayah 204 Ha dengan titik koordinat 7°34'51"S 110°51'17"E.</p>
-                    <p><strong>Pemerintahan:</strong> Saat ini dipimpin oleh Pj. Lurah Parji, A.Md (2024-2026).</p>
-                    <p><strong>Wilayah Dusun (13 Dusun):</strong> Badran, Ganggang, Jagang, Jetis, Karang Asem, Kismosari, Klatak, Kloron, Ngemplak, Ngentak, Ngombol, Ngrayapan, Tempel.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Tentang Desa Plumbon</span>
-                    <span class="arrow-v">V</span>
-                </div>
-                <div class="accordion-content">
-                    <p><strong>Identitas:</strong> Kecamatan Mojolaban, Kabupaten Sukoharjo, Jawa Tengah (Kode Pos: 57554).</p>
-                    <p><strong>Geografi & Batas:</strong> Luas 230 Ha. Batas wilayah: Utara (Gadingan), Selatan (Wirun), Barat (Sungai Bengawan Solo), Timur (Dukuh).</p>
-                    <p><strong>Pemerintahan:</strong> Dipimpin oleh Eko Hariyanto, SE., S.Sos. (2023-sekarang).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ================= 3. DEMOGRAFI ================= -->
-    <section id="demografi" class="section">
-        <div class="standard-content-container">
-            <h1>Data Kependudukan dan Demografi</h1>
-            <p class="subtitle" style="margin-bottom: 2rem;">Perbandingan rincian kependudukan di beberapa desa utama.</p>
-
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Tabel Perbandingan Demografi Desa</span>
-                    <span class="arrow-v">V</span>
-                </div>
-                <div class="accordion-content">
-                    <p>Berikut adalah ringkasan data kependudukan dan demografi wilayah:</p>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Nama Desa</th>
-                                <th>Total Penduduk</th>
-                                <th>Jumlah KK</th>
-                                <th>Pekerjaan Utama</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Desa Palur</strong></td>
-                                <td>±17.949 Jiwa</td>
-                                <td>4.860 KK</td>
-                                <td>Buruh industri, Wirausaha, PNS</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Desa Gadingan</strong></td>
-                                <td>6.711 Jiwa</td>
-                                <td>2.122 KK</td>
-                                <td>Wirausaha home industry & Petani</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Desa Plumbon</strong></td>
-                                <td>6.065 Jiwa</td>
-                                <td>1.790 KK</td>
-                                <td>Wirausaha</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ================= 4. FASILITAS & EKONOMI ================= -->
-    <section id="fasilitas" class="section">
-        <div class="standard-content-container">
-            <h1>Fasilitas Publik & Komoditas Unggulan</h1>
-            <p class="subtitle" style="margin-bottom: 2rem;">Data sarana fasilitas dan komoditas tiap wilayah desa.</p>
-
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Tabel Fasilitas & Komoditas Desa</span>
-                    <span class="arrow-v">V</span>
-                </div>
-                <div class="accordion-content">
-                    <p>Berikut adalah rincian fasilitas publik serta komoditas unggulan masing-masing desa:</p>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Nama Desa</th>
-                                <th>Pendidikan</th>
-                                <th>Kesehatan</th>
-                                <th>Komoditas Unggulan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Desa Palur</strong></td>
-                                <td>4 TK, 6 SD, 1 SMP</td>
-                                <td>1 Pustu, 1 PKD, 14 Posyandu</td>
-                                <td>Pusat perdagangan, jasa, kuliner</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Desa Gadingan</strong></td>
-                                <td>3 TK, 3 SD, 1 MI</td>
-                                <td>1 PKD, 1 Rumah Bersalin, 7 Posyandu</td>
-                                <td>Pertanian, Kok Bulu Tangkis, Karak</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Desa Plumbon</strong></td>
-                                <td>4 TK, 3 SD</td>
-                                <td>1 PKD, 6 Posyandu</td>
-                                <td>Sentra Kerupuk Karak & Kain Pantai</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 Tugas Kelompok Web Kecamatan Mojolaban - Rahmat Daniel & Tim</p>
     </footer>
-
-    <script>
-        // Fungsi pindah menu atas
-        function switchTab(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(sec => sec.classList.remove('active'));
-            const target = document.getElementById(sectionId);
-            if(target) { target.classList.add('active'); }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Fungsi buka/tutup accordion gaya borderless (tanpa kotak)
-        function toggleAccordion(headerElement) {
-            const item = headerElement.parentElement;
-            item.classList.toggle('open');
-        }
-    </script>
 
 </body>
 </html>

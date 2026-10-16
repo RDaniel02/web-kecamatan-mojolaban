@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Data Kependudukan dan Demografi Kecamatan Mojolaban, Kabupaten Sukoharjo.">
+    <title>Data Demografi - Kecamatan Mojolaban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="brand-container">
+                <img src="logo-sukoharjo.jpg" alt="Logo Sukoharjo" class="logo-img" onerror="this.style.display='none'">
+                <div class="brand-text">
+                    <span>PEMERINTAH KABUPATEN SUKOHARJO</span>
+                    <strong>KECAMATAN MOJOLABAN</strong>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="demografi.html" class="active">Demografi</a></li>
+                <li><a href="fasilitas.html">Fasilitas & Ekonomi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="standard-content-container">
+            <h1>Data Kependudukan dan Demografi</h1>
+            <p class="subtitle" style="margin-bottom: 2rem;">Perbandingan rincian kependudukan di beberapa desa utama.</p>
+
+            <div class="accordion-item open">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Tabel Perbandingan Demografi Desa</span>
+                    <span class="arrow-v">V</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Berikut adalah ringkasan data kependudukan dan demografi wilayah:</p>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama Desa</th>
+                                    <th>Total Penduduk</th>
+                                    <th>Jumlah KK</th>
+                                    <th>Pekerjaan Utama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Desa Palur</strong></td>
+                                    <td>±17.949 Jiwa</td>
+                                    <td>4.860 KK</td>
+                                    <td>Buruh industri, Wirausaha, PNS</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Desa Gadingan</strong></td>
+                                    <td>6.711 Jiwa</td>
+                                    <td>2.122 KK</td>
+                                    <td>Wirausaha home industry &amp; Petani</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Desa Plumbon</strong></td>
+                                    <td>6.065 Jiwa</td>
+                                    <td>1.790 KK</td>
+                                    <td>Wirausaha</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tugas Kelompok Web Kecamatan Mojolaban - Rahmat Daniel & Tim</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
