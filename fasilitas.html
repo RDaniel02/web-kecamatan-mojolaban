@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Informasi Fasilitas Publik dan Komoditas Unggulan di Kecamatan Mojolaban, Kabupaten Sukoharjo.">
+    <meta name="description" content="Informasi Fasilitas Pendidikan, Sarana Kesehatan, Tempat Ibadah, dan Komoditas Ekonomi Unggulan Desa di Kecamatan Mojolaban.">
     <title>Fasilitas & Ekonomi - Kecamatan Mojolaban</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,7 +22,7 @@
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
                 <li><a href="demografi.html">Demografi</a></li>
-                <li><a href="fasilitas.html" class="active">Fasilitas & Ekonomi</a></li>
+                <li><a href="fasilitas.html" class="active">Fasilitas &amp; Ekonomi</a></li>
             </ul>
         </nav>
     </header>
@@ -30,54 +30,325 @@
     <main class="page-content">
         <div class="standard-content-container">
             <h1>Fasilitas Publik &amp; Komoditas Unggulan</h1>
-            <p class="subtitle" style="margin-bottom: 2rem;">Data sarana fasilitas dan komoditas tiap wilayah desa.</p>
+            <p class="subtitle" style="margin-bottom: 2rem;">Data sarana prasarana penunjang kehidupan warga serta potensi perekonomian unggulan desa.</p>
+
+            <!-- 1. Bagian Komoditas Unggulan Ekonomi -->
+            <h2 class="sub-heading" style="margin-top: 0;">Potensi &amp; Komoditas Ekonomi Unggulan</h2>
+
+            <!-- Palur -->
+            <div class="feature-card">
+                <div class="feature-card-header">
+                    <span class="feature-card-title">Desa Palur &mdash; Episentrum Perdagangan, Jasa, &amp; Koridor Bisnis</span>
+                    <span class="badge badge-amber">Niaga &amp; Jasa</span>
+                </div>
+                <p>Sebagai simpul transportasi strategis di sebelah timur Kota Solo, Palur berkembang menjadi kawasan pusat perniagaan komersial terkemuka di Mojolaban. Komoditas dan potensi meliputi:</p>
+                <div class="chips-container" style="margin-top: 0.6rem;">
+                    <span class="chip">Pasar Tradisional &amp; Retail Modern</span>
+                    <span class="chip">Sentra Jasa &amp; Ekspedisi Logistik</span>
+                    <span class="chip">Koridor Kuliner Malam &amp; UMKM Makanan</span>
+                    <span class="chip">Kawasan Pemukiman Urban Terpadu</span>
+                </div>
+            </div>
+
+            <!-- Gadingan -->
+            <div class="feature-card">
+                <div class="feature-card-header">
+                    <span class="feature-card-title">Desa Gadingan &mdash; Sentra Industri Shuttlecock &amp; Pertanian Subur</span>
+                    <span class="badge badge-green">Sentra Manufaktur Kok</span>
+                </div>
+                <p>Desa Gadingan dikenal luas di tingkat regional hingga nasional atas ketrampilan warganya dalam merangkai shuttlecock (kok) bulutangkis dengan presisi tinggi. Sektor penopang lainnya adalah hasil sawah irigasi dan penganan tradisional:</p>
+                <div class="chips-container" style="margin-top: 0.6rem;">
+                    <span class="chip">Home Industry Shuttlecock (Kok Badminton)</span>
+                    <span class="chip">Pertanian Padi &amp; Palawija Produktif</span>
+                    <span class="chip">Makanan Olahan Karak Renyah</span>
+                    <span class="chip">Sentra Kerupuk Rambak &amp; Ampyang Kacang</span>
+                </div>
+            </div>
+
+            <!-- Plumbon -->
+            <div class="feature-card">
+                <div class="feature-card-header">
+                    <span class="feature-card-title">Desa Plumbon &mdash; Sentra Kerupuk Karak Gurih &amp; Kerajinan Kain Pantai</span>
+                    <span class="badge badge-amber">Industri Kreatif &amp; Kuliner</span>
+                </div>
+                <p>Plumbon mewarisi keahlian wirausaha kuliner dan tekstil rumahan yang khas. Karak beras buatan Plumbon terkenal gurih, renyah, dan diproses secara higienis, sedangkan kain pantainya menjadi komoditas ekspor ke berbagai destinasi wisata pantai nusantara:</p>
+                <div class="chips-container" style="margin-top: 0.6rem;">
+                    <span class="chip">Sentra Kerupuk Karak Beras Asli Sukoharjo</span>
+                    <span class="chip">Pewarnaan &amp; Produksi Kain Pantai Motif</span>
+                    <span class="chip">Pakaian Santai &amp; Daster Home Industry</span>
+                    <span class="chip">Jaringan Distribusi Wisata (Bali, Yogya, PGS)</span>
+                </div>
+            </div>
+
+            <!-- 2. Fasilitas Pendidikan -->
+            <h2 class="sub-heading">Sarana Fasilitas Pendidikan</h2>
 
             <div class="accordion-item open">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Tabel Fasilitas &amp; Komoditas Desa</span>
+                    <span>Rekapitulasi Jumlah Sekolah per Jenjang</span>
                     <span class="arrow-v">V</span>
                 </div>
                 <div class="accordion-content">
-                    <p>Berikut adalah rincian fasilitas publik serta komoditas unggulan masing-masing desa:</p>
+                    <p>Perbandingan jumlah unit institusi pendidikan yang beroperasi di wilayah desa:</p>
                     <div class="table-responsive">
                         <table class="data-table">
                             <thead>
                                 <tr>
-                                    <th>Nama Desa</th>
-                                    <th>Pendidikan</th>
-                                    <th>Kesehatan</th>
-                                    <th>Komoditas Unggulan</th>
+                                    <th>Jenjang Sekolah</th>
+                                    <th class="num">Desa Palur</th>
+                                    <th class="num">Desa Gadingan</th>
+                                    <th class="num">Desa Plumbon</th>
+                                    <th class="num">Total Unit</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Desa Palur</strong></td>
-                                    <td>4 TK, 6 SD, 1 SMP</td>
-                                    <td>1 Pustu, 1 PKD, 14 Posyandu</td>
-                                    <td>Pusat perdagangan, jasa, kuliner</td>
+                                    <td>Taman Kanak-kanak (TK)</td>
+                                    <td class="num">4</td>
+                                    <td class="num">3</td>
+                                    <td class="num">4</td>
+                                    <td class="num"><strong>11 Unit</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Desa Gadingan</strong></td>
-                                    <td>3 TK, 3 SD, 1 MI</td>
-                                    <td>1 PKD, 1 Rumah Bersalin, 7 Posyandu</td>
-                                    <td>Pertanian, Kok Bulu Tangkis, Karak</td>
+                                    <td>Sekolah Dasar (SD) Negeri</td>
+                                    <td class="num">6</td>
+                                    <td class="num">3</td>
+                                    <td class="num">3</td>
+                                    <td class="num"><strong>12 Unit</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Desa Plumbon</strong></td>
-                                    <td>4 TK, 3 SD</td>
-                                    <td>1 PKD, 6 Posyandu</td>
-                                    <td>Sentra Kerupuk Karak &amp; Kain Pantai</td>
+                                    <td>SD Swasta / Madrasah Ibtidaiyah (MI)</td>
+                                    <td class="num">1</td>
+                                    <td class="num">1</td>
+                                    <td class="num">0</td>
+                                    <td class="num"><strong>2 Unit</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Sekolah Menengah Pertama (SMP) Swasta</td>
+                                    <td class="num">1</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num"><strong>1 Unit</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>SMP Negeri / SMA / SMK</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num"><strong>0 Unit</strong></td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td><strong>TOTAL FASILITAS SEKOLAH</strong></td>
+                                    <td class="num"><strong>12 Unit</strong></td>
+                                    <td class="num"><strong>7 Unit</strong></td>
+                                    <td class="num"><strong>7 Unit</strong></td>
+                                    <td class="num"><strong>26 Unit</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--primary-color);">Daftar Nama Fasilitas Sekolah Terdata:</h4>
+                    <ul style="padding-left: 1.5rem; line-height: 1.8; font-size: 0.95rem;">
+                        <li><strong>Desa Gadingan:</strong> SD Negeri Gadingan 1, SD Negeri Gadingan 2, SD Negeri Gadingan 3, MI Baitusalam, TK Gadingan 1, TK Gadingan 2, dan TK Baitussalam.</li>
+                        <li><strong>Desa Plumbon:</strong> SD Negeri 01 Plumbon, SD Negeri 02 Plumbon, SD Negeri 03 Plumbon, TK Plumbon 01, dan TK Plumbon 02.</li>
+                        <li><strong>Desa Palur:</strong> 6 Unit SD Negeri (SDN Palur 1-6), 1 SD Swasta, 1 SMP Swasta, dan 4 Unit TK.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Fasilitas Sarana Kesehatan -->
+            <h2 class="sub-heading">Sarana Layanan Kesehatan</h2>
+
+            <div class="accordion-item open">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Sebaran Sarana &amp; Tenaga Medis Desa</span>
+                    <span class="arrow-v">V</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Fasilitas kesehatan primer dan pos pelayanan terpadu masyarakat:</p>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Jenis Sarana Kesehatan</th>
+                                    <th class="num">Desa Palur</th>
+                                    <th class="num">Desa Gadingan</th>
+                                    <th class="num">Desa Plumbon</th>
+                                    <th class="num">Total Wilayah</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Puskesmas Induk</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num"><strong>0</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Puskesmas Pembantu (Pustu)</td>
+                                    <td class="num">1</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num"><strong>1 Unit</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Pos Kesehatan Desa (PKD)</td>
+                                    <td class="num">1</td>
+                                    <td class="num">1</td>
+                                    <td class="num">1</td>
+                                    <td class="num"><strong>3 Unit</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Rumah Bersalin</td>
+                                    <td class="num">0</td>
+                                    <td class="num">1</td>
+                                    <td class="num">0</td>
+                                    <td class="num"><strong>1 Unit</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Praktek Dokter Mandiri</td>
+                                    <td class="num">4</td>
+                                    <td class="num">0</td>
+                                    <td class="num">1</td>
+                                    <td class="num"><strong>5 Titik</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Posyandu (Balita &amp; Lansia)</td>
+                                    <td class="num">14</td>
+                                    <td class="num">7</td>
+                                    <td class="num">6</td>
+                                    <td class="num"><strong>27 Pos</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Bidan Praktek Mandiri / Swasta</td>
+                                    <td class="num">6</td>
+                                    <td class="num">2</td>
+                                    <td class="num">2</td>
+                                    <td class="num"><strong>10 Titik</strong></td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td><strong>TOTAL LAYANAN KESEHATAN</strong></td>
+                                    <td class="num"><strong>26</strong></td>
+                                    <td class="num"><strong>11</strong></td>
+                                    <td class="num"><strong>10</strong></td>
+                                    <td class="num"><strong>47 Layanan</strong></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+
+            <!-- 4. Sarana Tempat Ibadah -->
+            <h2 class="sub-heading">Sarana Tempat Peribadatan</h2>
+
+            <div class="accordion-item open">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Sebaran Sarana Ibadah Antar Desa</span>
+                    <span class="arrow-v">V</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Fasilitas rumah ibadah yang menunjang kegiatan spiritual warga masyarakat:</p>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Rumah Ibadah</th>
+                                    <th class="num">Desa Palur</th>
+                                    <th class="num">Desa Gadingan</th>
+                                    <th class="num">Desa Plumbon</th>
+                                    <th class="num">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Masjid Jami' / Desa</td>
+                                    <td class="num">19</td>
+                                    <td class="num">9</td>
+                                    <td class="num">7</td>
+                                    <td class="num"><strong>35 Unit</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Langgar / Surau / Mushola</td>
+                                    <td class="num">0</td>
+                                    <td class="num">6</td>
+                                    <td class="num">7</td>
+                                    <td class="num"><strong>13 Unit</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Gereja (Kristen / Katolik)</td>
+                                    <td class="num">2</td>
+                                    <td class="num">1</td>
+                                    <td class="num">1</td>
+                                    <td class="num"><strong>4 Unit</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Pura</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num"><strong>0 Unit</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Vihara / Kelenteng</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num">0</td>
+                                    <td class="num"><strong>0 Unit</strong></td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td><strong>TOTAL RUMAH IBADAH</strong></td>
+                                    <td class="num"><strong>21</strong></td>
+                                    <td class="num"><strong>16</strong></td>
+                                    <td class="num"><strong>15</strong></td>
+                                    <td class="num"><strong>52 Tempat</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Tugas Kelompok Web Kecamatan Mojolaban - Rahmat Daniel & Tim</p>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Kecamatan Mojolaban</h4>
+                <p>Portal Sistem Informasi Wilayah Kecamatan Mojolaban, Kabupaten Sukoharjo, Provinsi Jawa Tengah. Media publikasi data profil wilayah, kependudukan, sarana prasarana publik, dan potensi ekonomi desa.</p>
+                <div class="student-badges">
+                    <div class="student-card">
+                        <strong>Kelompok 5 Sistem Terdistribusi</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi Halaman</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil &amp; Visi Misi</a></li>
+                    <li><a href="demografi.html">Data Demografi &amp; Kependudukan</a></li>
+                    <li><a href="fasilitas.html">Fasilitas Publik &amp; Ekonomi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sumber Referensi Data</h4>
+                <ul>
+                    <li><a href="https://ppid.mojolaban.sukoharjokab.go.id/profil/tentang" target="_blank" rel="noopener noreferrer">PPID Kecamatan Mojolaban</a></li>
+                    <li><a href="https://ppid.mojolaban.sukoharjokab.go.id/informasi/setiapsaat" target="_blank" rel="noopener noreferrer">Informasi Serta Merta PPID</a></li>
+                    <li><a href="https://id.wikipedia.org/wiki/Palur,_Mojolaban,_Sukoharjo" target="_blank" rel="noopener noreferrer">Wikipedia Desa Palur</a></li>
+                    <li><a href="https://id.wikipedia.org/wiki/Gadingan,_Mojolaban,_Sukoharjo" target="_blank" rel="noopener noreferrer">Wikipedia Desa Gadingan</a></li>
+                    <li><a href="https://id.wikipedia.org/wiki/Plumbon,_Mojolaban,_Sukoharjo" target="_blank" rel="noopener noreferrer">Wikipedia Desa Plumbon</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Portal Informasi Wilayah Kecamatan Mojolaban. All Rights Reserved.</span>
+            <span>Kabupaten Sukoharjo, Jawa Tengah</span>
+        </div>
     </footer>
 
     <script src="script.js"></script>
