@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Informasi Fasilitas Pendidikan, Sarana Kesehatan, Tempat Ibadah, dan Komoditas Ekonomi Unggulan Desa di Kecamatan Mojolaban.">
     <title>Fasilitas & Ekonomi - Kecamatan Mojolaban</title>
+    <link rel="icon" href="logo-sukoharjo.jpg" type="image/jpeg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Langsung ke Konten Utama</a>
 
     <header>
         <nav class="navbar">
             <a href="index.html" class="brand-container">
-                <img src="logo-sukoharjo.jpg" alt="Logo Sukoharjo" class="logo-img" onerror="this.style.display='none'">
+                <img src="logo-sukoharjo.jpg" alt="Logo Kabupaten Sukoharjo" class="logo-img" onerror="this.style.display='none'">
                 <div class="brand-text">
                     <span>PEMERINTAH KABUPATEN SUKOHARJO</span>
                     <strong>KECAMATAN MOJOLABAN</strong>
                 </div>
             </a>
-            <ul class="nav-links">
+            <button class="hamburger" aria-label="Toggle menu navigasi" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" aria-hidden="false">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
                 <li><a href="demografi.html">Demografi</a></li>
@@ -27,7 +34,7 @@
         </nav>
     </header>
 
-    <main class="page-content">
+    <main id="main-content" class="page-content">
         <div class="standard-content-container">
             <h1>Fasilitas Publik &amp; Komoditas Unggulan</h1>
             <p class="subtitle" style="margin-bottom: 2rem;">Data sarana prasarana penunjang kehidupan warga serta potensi perekonomian unggulan desa.</p>
@@ -54,7 +61,7 @@
             <div class="feature-card">
                 <div class="feature-card-header">
                     <span class="feature-card-title">Desa Gadingan &mdash; Sentra Industri Shuttlecock &amp; Pertanian Subur</span>
-                    <span class="badge badge-green">Sentra Manufaktur Kok</span>
+                    <span class="badge badge-amber">Sentra Manufaktur Kok</span>
                 </div>
                 <p>Desa Gadingan dikenal luas di tingkat regional hingga nasional atas ketrampilan warganya dalam merangkai shuttlecock (kok) bulutangkis dengan presisi tinggi. Sektor penopang lainnya adalah hasil sawah irigasi dan penganan tradisional:</p>
                 <div class="chips-container" style="margin-top: 0.6rem;">
@@ -86,7 +93,7 @@
             <div class="accordion-item open">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <span>Rekapitulasi Jumlah Sekolah per Jenjang</span>
-                    <span class="arrow-v">V</span>
+                    <span class="arrow-v">▾</span>
                 </div>
                 <div class="accordion-content">
                     <p>Perbandingan jumlah unit institusi pendidikan yang beroperasi di wilayah desa:</p>
@@ -163,7 +170,7 @@
             <div class="accordion-item open">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <span>Sebaran Sarana &amp; Tenaga Medis Desa</span>
-                    <span class="arrow-v">V</span>
+                    <span class="arrow-v">▾</span>
                 </div>
                 <div class="accordion-content">
                     <p>Fasilitas kesehatan primer dan pos pelayanan terpadu masyarakat:</p>
@@ -247,7 +254,7 @@
             <div class="accordion-item open">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <span>Sebaran Sarana Ibadah Antar Desa</span>
-                    <span class="arrow-v">V</span>
+                    <span class="arrow-v">▾</span>
                 </div>
                 <div class="accordion-content">
                     <p>Fasilitas rumah ibadah yang menunjang kegiatan spiritual warga masyarakat:</p>

@@ -5,21 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal Informasi Wilayah Kecamatan Mojolaban, Kabupaten Sukoharjo, Jawa Tengah. Berisi informasi profil wilayah, kependudukan, fasilitas, dan berita terkini.">
     <title>Portal Informasi Wilayah - Kecamatan Mojolaban</title>
+    <link rel="icon" href="logo-sukoharjo.jpg" type="image/jpeg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Langsung ke Konten Utama</a>
 
     <header>
         <nav class="navbar">
             <!-- Brand container menuju Beranda -->
             <a href="index.html" class="brand-container">
-                <img src="logo-sukoharjo.jpg" alt="Logo Sukoharjo" class="logo-img" onerror="this.style.display='none'">
+                <img src="logo-sukoharjo.jpg" alt="Logo Kabupaten Sukoharjo" class="logo-img" onerror="this.style.display='none'">
                 <div class="brand-text">
                     <span>PEMERINTAH KABUPATEN SUKOHARJO</span>
                     <strong>KECAMATAN MOJOLABAN</strong>
                 </div>
             </a>
-            <ul class="nav-links">
+            <button class="hamburger" aria-label="Toggle menu navigasi" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" aria-hidden="false">
                 <li><a href="index.html" class="active">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
                 <li><a href="demografi.html">Demografi</a></li>
@@ -28,16 +35,38 @@
         </nav>
     </header>
 
-    <main class="page-content">
-        <!-- Header Judul Beranda -->
-        <div class="container">
-            <div class="hero-header">
-                <span class="badge badge-amber" style="margin-bottom: 0.8rem;">Portal Data Wilayah &bull; Sukoharjo Makmur</span>
-                <h1>Portal Informasi Wilayah Kecamatan Mojolaban</h1>
-                <p class="subtitle">Sistem Informasi Profil Desa, Kependudukan, Fasilitas Publik, dan Komoditas Ekonomi Kabupaten Sukoharjo, Jawa Tengah.</p>
+    <main id="main-content" class="page-content">
 
-                <!-- Ringkasan Statistik Utama -->
-                <div class="metric-grid" style="margin-top: 2rem;">
+        <!-- 1. HERO UTAMA DENGAN BACKGROUND KANTOR.JPG -->
+        <section class="hero-modern">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge-wrap">
+                        <span class="hero-badge">
+                            <span class="pulse-dot"></span>
+                            Portal Informasi Wilayah &bull; Sukoharjo Makmur
+                        </span>
+                    </div>
+                    <h1 class="hero-title">Kecamatan Mojolaban</h1>
+                    <p class="hero-subtitle">
+                        Sistem Informasi Wilayah Terpadu Profil Desa, Kependudukan, Sarana Prasarana Publik, dan Sentra Komoditas Ekonomi Kabupaten Sukoharjo, Jawa Tengah.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="profil.html" class="btn-hero-primary">
+                            <span>Jelajahi Profil Wilayah</span> &rarr;
+                        </a>
+                        <a href="demografi.html" class="btn-hero-secondary">
+                            <span>Data Kependudukan</span>
+                        </a>
+                        <a href="fasilitas.html" class="btn-hero-secondary">
+                            <span>Fasilitas &amp; Ekonomi</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4 Metrik Statistik Utama Beranda -->
+                <div class="metric-grid hero-metric-grid">
                     <div class="metric-card">
                         <div class="metric-number">15 Desa</div>
                         <div class="metric-label">Wilayah Administrasi</div>
@@ -45,7 +74,7 @@
                     </div>
                     <div class="metric-card">
                         <div class="metric-number">843 Ha</div>
-                        <div class="metric-label">Luas Wilayah 3 Desa Fokus</div>
+                        <div class="metric-label">Luas 3 Desa Fokus</div>
                         <div class="metric-desc">Palur (409 Ha), Plumbon (230 Ha), Gadingan (204 Ha)</div>
                     </div>
                     <div class="metric-card">
@@ -56,16 +85,69 @@
                     <div class="metric-card">
                         <div class="metric-number">3 Klaster</div>
                         <div class="metric-label">Sentra Ekonomi Unggulan</div>
-                        <div class="metric-desc">Shuttlecock, Karak &amp; Kain Pantai, Perdagangan</div>
+                        <div class="metric-desc">Shuttlecock, Karak &amp; Kain Pantai, Niaga</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Sorotan Desa Fokus Penelitian -->
+        <!-- 2. QUICK ACCESS CARDS (AKSES CEPAT DATA) -->
+        <section class="quick-access-section">
+            <div class="container">
+                <div class="section-intro-header">
+                    <h2>Akses Informasi Publik Terpadu</h2>
+                    <p class="subtitle">Pilihan kanal informasi data wilayah, kependudukan, fasilitas, dan potensi ekonomi lokal:</p>
+                </div>
+                <div class="quick-access-grid">
+                    <a href="profil.html" class="quick-card">
+                        <h3>Profil Wilayah &amp; Pemerintahan</h3>
+                        <p>Visi &amp; Misi, batas geografis, sejarah kepemimpinan kades, dan struktur dusun administratif.</p>
+                        <span class="quick-card-link">Lihat Profil &rarr;</span>
+                    </a>
+
+                    <a href="demografi.html" class="quick-card">
+                        <h3>Kependudukan &amp; Demografi</h3>
+                        <p>Statistik penduduk, piramida kelompok usia, rasio gender, jenjang pendidikan, dan agama.</p>
+                        <span class="quick-card-link">Lihat Demografi &rarr;</span>
+                    </a>
+
+                    <a href="fasilitas.html" class="quick-card">
+                        <h3>Sentra Komoditas Unggulan</h3>
+                        <p>Home industry shuttlecock Gadingan, kerupuk karak Plumbon, tekstil kain pantai, dan pasar Palur.</p>
+                        <span class="quick-card-link">Lihat Potensi &rarr;</span>
+                    </a>
+
+                    <a href="fasilitas.html" class="quick-card">
+                        <h3>Sarana &amp; Fasilitas Publik</h3>
+                        <p>Sebaran 26 unit sarana pendidikan, 47 fasilitas kesehatan primer, dan 52 tempat peribadatan warga.</p>
+                        <span class="quick-card-link">Lihat Fasilitas &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TENTANG KECAMATAN MOJOLABAN (NILAI HISTORIS & GEOGRAFIS) -->
+        <section class="about-fullwidth">
+            <div class="about-content-wrapper">
+                <div class="about-img-box">
+                    <img src="kantor.jpg" alt="Foto Kantor Kecamatan Mojolaban Sukoharjo" onerror="this.src='https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <div class="about-text-box">
+                    <span class="badge badge-red" style="margin-bottom: 0.6rem;">Karakteristik Wilayah</span>
+                    <h2>Tentang Kecamatan Mojolaban</h2>
+                    <p>Kecamatan Mojolaban terletak di dataran dengan ketinggian rata-rata 104 meter di atas permukaan laut (dpl). Jarak bentang dari Barat ke Timur &plusmn; 8,0 KM, dan jarak dari Utara ke Selatan &plusmn; 6,0 KM. Jarak dari Ibukota Kecamatan ke Ibukota Kabupaten Sukoharjo adalah &plusmn; 11 KM.</p>
+                    <p>Kecamatan Mojolaban menaungi 15 Desa/Kelurahan dengan keragaman potensi alam, budaya, dan home industry yang kuat. Wilayah ini dibatasi oleh aliran Sungai Bengawan Solo di sisi barat yang memberikan kesuburan tanah pertanian sekaligus mendukung geliat usaha mandiri warga masyarakat.</p>
+                    <a href="profil.html" class="btn-selengkapnya">
+                        Pelajari Profil Selengkapnya &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SOROTAN WILAYAH & POTENSI 3 DESA FOKUS -->
         <section class="spotlight-section">
             <div class="spotlight-header">
-                <h2>Sorotan Wilayah &amp; Potensi Desa</h2>
+                <h2>Sorotan Wilayah &amp; Potensi Desa Fokus</h2>
                 <p class="subtitle">Eksplorasi profil dan karakteristik desa fokus pengumpulan data di Kecamatan Mojolaban:</p>
             </div>
 
@@ -106,9 +188,9 @@
                 <!-- Desa Gadingan -->
                 <div class="spotlight-card">
                     <div class="spotlight-top">
-                        <span class="badge badge-green">Sentra Kok &amp; Pertanian</span>
+                        <span class="badge badge-amber">Sentra Kok &amp; Pertanian</span>
                         <h3 class="spotlight-title">Desa Gadingan</h3>
-                        <p>Sentra manufaktur shuttlecock (kok bulutangkis) nasional di tepi Bengawan Solo, ditopang oleh pertanian sawah irigasi serta industri camilan karak dan rambak.</p>
+                        <p> Terdapat Sentra manufaktur shuttlecock nasional di tepi Bengawan Solo, desa Gadingan ditopang oleh pertanian sawah irigasi serta industri camilan karak dan rambak.</p>
                         
                         <div class="spotlight-stats">
                             <div class="spotlight-stat-item">
@@ -171,32 +253,38 @@
             </div>
         </section>
 
-        <!-- 1. Bagian Berita Terbaru -->
+        <!-- 5. BERITA & INFORMASI TERKINI -->
         <section class="news-fullwidth">
             <div class="news-container">
-                <h2>Berita &amp; Informasi Terkini Kecamatan Mojolaban</h2>
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.8rem;">
+                    <div>
+                        <h2>Berita &amp; Informasi Terkini Kecamatan Mojolaban</h2>
+                        <p class="subtitle" style="font-size: 0.95rem;">Warta pembangunan daerah, kepedulian sosial, dan agenda pemerintahan terkini:</p>
+                    </div>
+                </div>
+
                 <div class="news-grid">
                     <!-- Berita 1 -->
                     <a href="https://solo.tribunnews.com/simakmur/348403/para-petani-plt-bupati-sukoharjo-gotong-royong-keruk-sedimen-agar-91-hektare-sawah-kembali-terairi" target="_blank" rel="noopener noreferrer" class="news-card">
-                        <img src="https://asset.tribunnews.com/bgJddN1QqrKXbW77g4Pj8W3LH20=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/solo/foto/bank/originals/Gabungan-Petani-Pemakai-Air-GP3A-Ngupoyo-Roso-2.jpg" alt="Gotong Royong Keruk Sedimen">
+                        <img src="https://asset.tribunnews.com/bgJddN1QqrKXbW77g4Pj8W3LH20=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/solo/foto/bank/originals/Gabungan-Petani-Pemakai-Air-GP3A-Ngupoyo-Roso-2.jpg" alt="Gotong Royong Keruk Sedimen" loading="lazy" onerror="this.style.background='#e7e5e4';this.style.minHeight='160px';this.alt='Gambar tidak tersedia'">
                         <div class="news-card-content">
-                            <span class="news-date">TribunSolo / SiMakmur</span>
+                            <span class="news-date">TribunSolo / SiMakmur &bull; Pertanian &amp; Irigasi</span>
                             <h3>Para Petani &amp; Plt Bupati Sukoharjo Gotong Royong Keruk Sedimen Agar 91 Hektare Sawah Kembali Terairi</h3>
                         </div>
                     </a>
                     <!-- Berita 2 -->
                     <a href="https://solo.tribunnews.com/simakmur/343062/kolaborasi-pemdes-triyagan-sukoharjo-dan-seniman-sesaji-bagi-bagi-sembako-dan-cek-kesehatan-gratis" target="_blank" rel="noopener noreferrer" class="news-card">
-                        <img src="https://asset.tribunnews.com/E1fFywEcW5xpJ6ckpd4zpA_vQCA=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/solo/foto/bank/originals/Aksi-kepedulian-sosial-dilakukan-Pemerintah-Desa-Triyagan-Kecamatan-Mojolaba.jpg" alt="Bagi Sembako Pemdes Triyagan">
+                        <img src="https://asset.tribunnews.com/E1fFywEcW5xpJ6ckpd4zpA_vQCA=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/solo/foto/bank/originals/Aksi-kepedulian-sosial-dilakukan-Pemerintah-Desa-Triyagan-Kecamatan-Mojolaba.jpg" alt="Bagi Sembako Pemdes Triyagan" loading="lazy" onerror="this.style.background='#e7e5e4';this.style.minHeight='160px';this.alt='Gambar tidak tersedia'">
                         <div class="news-card-content">
-                            <span class="news-date">TribunSolo / SiMakmur</span>
+                            <span class="news-date">TribunSolo / SiMakmur &bull; Sosial &amp; Kesehatan</span>
                             <h3>Kolaborasi Pemdes Triyagan Sukoharjo dan Seniman Sesaji Bagi-bagi Sembako dan Cek Kesehatan Gratis</h3>
                         </div>
                     </a>
                     <!-- Berita 3 -->
                     <a href="https://solo.tribunnews.com/simakmur/340746/bupati-etik-suryani-sidak-industri-ciu-di-mojolaban-sukoharjo-satu-bangunan-disegel-sementara" target="_blank" rel="noopener noreferrer" class="news-card">
-                        <img src="https://asset.tribunnews.com/Al5zOKx2Gox-LEMKLRRe345kNME=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/solo/foto/bank/originals/Bupati-Etik-sidak-produksi-minuman-keras-jenis-ciu-di-Desa-Sentul.jpg" alt="Sidak Industri Ciu Mojolaban">
+                        <img src="https://asset.tribunnews.com/Al5zOKx2Gox-LEMKLRRe345kNME=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/solo/foto/bank/originals/Bupati-Etik-sidak-produksi-minuman-keras-jenis-ciu-di-Desa-Sentul.jpg" alt="Sidak Industri Ciu Mojolaban" loading="lazy" onerror="this.style.background='#e7e5e4';this.style.minHeight='160px';this.alt='Gambar tidak tersedia'">
                         <div class="news-card-content">
-                            <span class="news-date">TribunSolo / SiMakmur</span>
+                            <span class="news-date">TribunSolo / SiMakmur &bull; Penertiban Wilayah</span>
                             <h3>Bupati Etik Suryani Sidak Industri Ciu di Mojolaban Sukoharjo, Satu Bangunan Disegel Sementara</h3>
                         </div>
                     </a>
@@ -204,39 +292,28 @@
             </div>
         </section>
 
-        <!-- 2. Banner Full-Width Bagian Tentang -->
-        <section class="about-fullwidth">
-            <div class="about-content-wrapper">
-                <div class="about-img-box">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUdmmR0O_01vAeb1c_zfM0UAE5Xlu9lDWe2SpOnFVANMpLVIaeEo4FMzfP&s=10" alt="Ilustrasi Wilayah" onerror="this.src='https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1?auto=format&fit=crop&w=600&q=80'">
-                </div>
-                <div class="about-text-box">
-                    <h2>Tentang Kecamatan Mojolaban</h2>
-                    <p>Kecamatan Mojolaban terletak di dataran dengan ketinggian rata-rata 104 meter di atas permukaan laut (dpl). Jarak bentang dari Barat ke Timur &plusmn; 8,0 KM, dan jarak dari Utara ke Selatan &plusmn; 6,0 KM. Jarak dari Ibukota Kecamatan ke Ibukota Kabupaten Sukoharjo adalah &plusmn; 11 KM.</p>
-                    <p>Kecamatan Mojolaban menaungi 15 Desa/Kelurahan dengan keragaman potensi alam, budaya, dan home industry yang kuat. Wilayah ini dibatasi oleh aliran Sungai Bengawan Solo di sisi barat yang memberikan kesuburan tanah pertanian sekaligus mendukung geliat usaha mandiri warga masyarakat.</p>
-                    <a href="profil.html" class="btn-selengkapnya">
-                        Pelajari Profil Selengkapnya &rarr;
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Banner Full-Width Bagian Kontak & Maps Interaktif -->
+        <!-- 6. KONTAK KANTOR KECAMATAN & PETA INTERAKTIF -->
         <section class="contact-location-fullwidth">
             <div class="contact-location-wrapper">
                 
                 <!-- Kontak di Kiri -->
                 <div class="contact-card">
-                    <h3>Kontak Kantor Kecamatan</h3>
-                    <p><strong>Alamat:</strong> Jl. Veteran Perang Kemerdekaan No. 04 Bekonang, Mojolaban, Sukoharjo 57554</p>
+                    <h3>Kontak &amp; Layanan Kantor Kecamatan</h3>
+                    <p><strong>Alamat Kantor:</strong> Jl. Veteran Perang Kemerdekaan No. 04 Bekonang, Mojolaban, Sukoharjo 57554</p>
                     <p><strong>Telepon:</strong> (0271) 611767</p>
                     <p><strong>Jam Operasional:</strong> Senin &ndash; Jumat (08.00 &ndash; 15.00 WIB)</p>
-                    <p><strong>Pelayanan:</strong> Administrasi Kependudukan, Perizinan Usaha, dan Pelayanan Terpadu Satu Pintu (PTSP)</p>
+                    <p><strong>Pelayanan Masyarakat:</strong> Administrasi Kependudukan (KTP/KK), Perizinan Usaha Mikro, Legalisir, dan Pelayanan Terpadu Satu Pintu (PTSP).</p>
+                    
+                    <div style="margin-top: 1.25rem;">
+                        <a href="https://maps.google.com/?q=Kecamatan+Mojolaban+Sukoharjo" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size: 0.86rem;">
+                            📍 Petunjuk Arah Google Maps &rarr;
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Lokasi Peta di Kanan -->
                 <div class="location-card">
-                    <h3>Lokasi Peta Wilayah</h3>
+                    <h3>Lokasi Peta Kantor Kecamatan</h3>
                     <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">Peta interaktif kantor kecamatan (bisa digeser dan di-zoom):</p>
                     
                     <div class="map-embed-box">
